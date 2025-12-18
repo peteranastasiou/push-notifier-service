@@ -22,5 +22,7 @@ COPY ./app .
 RUN useradd appuser && chown -R appuser /app
 USER appuser
 
+EXPOSE 8080
+
 # Run
-CMD ["fastapi", "run", "main.py", "--port", "80"]
+CMD ["fastapi", "run", "main.py", "--port", "8080"]
